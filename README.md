@@ -1,4 +1,4 @@
-# 🌍 Tax Calculator App
+#  Tax Calculator App
 
 This is a full-stack web application that allows users to:
 
@@ -12,7 +12,7 @@ Built using **React.js**, **Node.js**, **Express.js**, and **MongoDB**.
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend:** React.js
 - **Backend:** Node.js, Express.js
@@ -21,7 +21,7 @@ Built using **React.js**, **Node.js**, **Express.js**, and **MongoDB**.
 
 ---
 
-## 🚀 Features
+##  Features
 
 - Fetches country-specific tax rates and average salary from MongoDB
 - Calculates net income after tax
@@ -31,9 +31,9 @@ Built using **React.js**, **Node.js**, **Express.js**, and **MongoDB**.
 
 ---
 
-## 📥 How to Install and Run Locally
+##  How to Install and Run Locally
 
-### 📁 1. Clone the repository
+###  1. Clone the repository
 
 ```bash
 git clone https://github.com/DimZel1/country-tax-app.git
