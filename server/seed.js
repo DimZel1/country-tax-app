@@ -1,7 +1,9 @@
+//here is our seed to populate the database with initial data
+
 const mongoose = require('mongoose');
 require('dotenv').config(); 
 
-
+// Connect to MongoDB Atlas
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -9,14 +11,19 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log('Connected to MongoDB Atlas'))
 .catch(err => console.error('Connection error:', err));
 
+// Schema and model
+// This schema defines the structure of the Country documents in the MongoDB collection.
+// Each country will have a name, tax rate, and average salary.
 const CountrySchema = new mongoose.Schema({
   name: String,
   taxRate: Number,
   averageSalary: Number, 
 });
 
+// This creates a Mongoose model named 'Country' based on the CountrySchema.
 const Country = mongoose.model('Country', CountrySchema);
 
+// Seed data
 const seedData = [
   { name: "USA", taxRate: 21, averageSalary: 55000 },
   { name: "Canada", taxRate: 15, averageSalary: 48000 },
@@ -40,6 +47,7 @@ const seedData = [
   { name: "Switzerland", taxRate: 18, averageSalary: 60000 }
 ];
 
+// Insert seed data into the database
 Country.insertMany(seedData)
   .then(() => {
     console.log('Seeded DB!');
