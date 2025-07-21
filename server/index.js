@@ -44,8 +44,14 @@ app.get('/api/countries', async (req, res) => {
   }
 });
 
+// Import news routes and use them
+// This imports the news routes defined in the news.js file and mounts them on the /api
+const newsRoutes = require('./routes/news');
+app.use('/api/news', newsRoutes);
+
 // Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
